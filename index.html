@@ -1,0 +1,598 @@
+<!DOCTYPE html>
+<html lang="fr" class="h-full bg-slate-50 text-slate-900 font-sans antialiased">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <!-- Méta-description SEO & Titre (Exigence Point 9 & 10) -->
+  <title>BLACK FRIDAY — HOMACA Solutions Digital | Équipements IT Bénin</title>
+  <meta name="description" content="Profitez de réductions jusqu'à -50% sur le matériel informatique et équipements high-tech certifiés par HOMACA Solutions Digital au Bénin. Livraison rapide 24h/48h.">
+  
+  <!-- Favicon SVG (Exigence Point 9 & 10) -->
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' rx='20' fill='%233B82F6'/><text x='50%' y='65%' font-size='60' font-weight='bold' fill='white' text-anchor='middle'>H</text></svg>">
+
+  <!-- Tailwind CSS & FontAwesome -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+
+  <style>
+    .bg-homaca-gradient {
+      background: linear-gradient(135deg, #3B82F6 0%, #6366F1 50%, #A855F7 100%);
+    }
+    .text-homaca-gradient {
+      background: linear-gradient(135deg, #3B82F6 0%, #A855F7 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+    @keyframes marquee {
+      0% { transform: translateX(0%); }
+      100% { transform: translateX(-50%); }
+    }
+    .animate-marquee {
+      display: flex;
+      width: 200%;
+      animation: marquee 25s linear infinite;
+    }
+    .animate-marquee:hover {
+      animation-play-state: paused;
+    }
+  </style>
+</head>
+<body class="min-h-full flex flex-col justify-between">
+
+  <!-- BANDEAU SUPERIEUR DÉFILANT -->
+  <div class="bg-slate-950 text-slate-300 text-xs py-2 overflow-hidden border-b border-slate-800">
+    <div class="animate-marquee whitespace-nowrap">
+      <div class="flex gap-8 items-center shrink-0 pr-8">
+        <span class="flex items-center gap-2 text-rose-400 font-bold"><i class="fa-solid fa-bolt"></i> OFFRES SPÉCIALES BLACK FRIDAY — JUSQU'À -50%</span>
+        <span class="text-slate-600">•</span>
+        <span>Stock officiel Bénin — Livraison 24h/48h</span>
+        <span class="text-slate-600">•</span>
+        <span>WhatsApp Direct : <strong>+229 01 98 73 04 05</strong></span>
+        <span class="text-slate-600">•</span>
+      </div>
+      <div class="flex gap-8 items-center shrink-0 pr-8">
+        <span class="flex items-center gap-2 text-rose-400 font-bold"><i class="fa-solid fa-bolt"></i> OFFRES SPÉCIALES BLACK FRIDAY — JUSQU'À -50%</span>
+        <span class="text-slate-600">•</span>
+        <span>Stock officiel Bénin — Livraison 24h/48h</span>
+        <span class="text-slate-600">•</span>
+        <span>WhatsApp Direct : <strong>+229 01 98 73 04 05</strong></span>
+        <span class="text-slate-600">•</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- NAVBAR -->
+  <header class="bg-white border-b border-slate-200 sticky top-0 z-30 shadow-sm">
+    <div class="max-w-6xl mx-auto px-4 h-16 flex items-center justify-between">
+      <a href="#" class="flex items-center gap-2.5 font-extrabold text-lg tracking-tight" aria-label="Accueil HOMACA">
+        <span class="w-8 h-8 rounded-lg bg-homaca-gradient flex items-center justify-center text-white font-black text-sm shadow-sm">
+          H
+        </span>
+        <span class="text-slate-900">
+          HOMACA <span class="text-homaca-gradient font-bold">Solutions Digital</span>
+        </span>
+      </a>
+
+      <a href="#commande" class="bg-slate-900 hover:bg-slate-800 text-white text-xs font-semibold px-4 py-2.5 rounded-lg transition flex items-center gap-2">
+        <i class="fa-solid fa-cart-shopping"></i>
+        <span>Mon Panier</span>
+        <span id="nav-cart-count" class="bg-homaca-gradient text-white px-1.5 py-0.5 rounded text-[10px] font-bold">0</span>
+      </a>
+    </div>
+  </header>
+
+  <!-- CONTENU PRINCIPAL DE LA BOUTIQUE -->
+  <main id="main-content" class="max-w-6xl mx-auto px-4 py-8 space-y-12">
+
+    <!-- HERO SECTION -->
+    <section class="relative overflow-hidden bg-homaca-gradient rounded-3xl p-6 sm:p-10 grid md:grid-cols-2 gap-8 items-center shadow-xl text-white">
+      <div class="absolute inset-0 opacity-10 bg-[radial-gradient(#fff_1px,transparent_1px)] [background-size:16px_16px] pointer-events-none"></div>
+
+      <div class="relative space-y-6 z-10">
+        <div class="inline-flex items-center gap-2 bg-white/15 border border-white/20 text-white px-3 py-1 rounded-full text-xs font-bold uppercase tracking-wider backdrop-blur-md">
+          <span class="relative flex h-2 w-2">
+            <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-white opacity-75"></span>
+            <span class="relative inline-flex rounded-full h-2 w-2 bg-white"></span>
+          </span>
+          <i class="fa-solid fa-fire text-amber-300"></i> Ventes Flash Black Friday
+        </div>
+        
+        <h1 class="text-3xl sm:text-5xl font-black leading-tight">
+          Équipements IT <br><span class="text-amber-300">Jusqu'à -50% de réduction</span>
+        </h1>
+        
+        <p class="text-white/90 text-sm leading-relaxed max-w-lg font-medium">
+          Profitez des meilleures ventes privées de l'année sur nos équipements d'origine certifiés par HOMACA Solutions Digital avec livraison rapide au Bénin.
+        </p>
+
+        <!-- COMPTE À REBOURS -->
+        <div class="bg-black/20 border border-white/15 rounded-2xl p-4 inline-block backdrop-blur-md">
+          <p class="text-[11px] text-white/80 font-semibold mb-2 uppercase tracking-wider flex items-center gap-1.5">
+            <i class="fa-regular fa-clock text-amber-300"></i> Fin de la promo dans :
+          </p>
+          <div class="flex gap-3 text-center font-mono font-extrabold text-lg text-slate-900">
+            <div class="bg-white px-3 py-1.5 rounded-xl shadow-md">
+              <span id="timer-hours">04</span><span class="block text-[9px] text-slate-500 font-sans font-normal uppercase">Heures</span>
+            </div>
+            <div class="bg-white px-3 py-1.5 rounded-xl shadow-md">
+              <span id="timer-minutes">59</span><span class="block text-[9px] text-slate-500 font-sans font-normal uppercase">Min</span>
+            </div>
+            <div class="bg-white px-3 py-1.5 rounded-xl shadow-md">
+              <span id="timer-seconds">59</span><span class="block text-[9px] text-slate-500 font-sans font-normal uppercase">Sec</span>
+            </div>
+          </div>
+        </div>
+
+        <div>
+          <a href="#catalogue" class="inline-flex items-center gap-2.5 bg-slate-900 hover:bg-slate-800 text-white font-extrabold text-xs px-7 py-3.5 rounded-xl transition shadow-lg active:scale-95">
+            <span>Découvrir le catalogue</span>
+            <i class="fa-solid fa-arrow-right"></i>
+          </a>
+        </div>
+      </div>
+
+      <!-- CARTE PRODUIT STAR -->
+      <div class="relative z-10 bg-white/10 border border-white/20 rounded-2xl p-5 flex flex-col sm:flex-row gap-5 items-center backdrop-blur-md hover:scale-[1.02] transition-transform duration-300 shadow-xl">
+        <div class="relative w-full sm:w-40 h-40 bg-white rounded-xl overflow-hidden border border-white/20 shrink-0">
+          <span class="absolute top-2 left-2 bg-rose-600 text-white text-[10px] font-black px-2 py-0.5 rounded-md shadow-md z-10">
+            -50%
+          </span>
+          <img src="https://images.unsplash.com/photo-1505740420928-5e560c06d30e?auto=format&fit=crop&w=400&q=80" alt="Casque ANC Studio" width="160" height="160" loading="eager" class="w-full h-full object-cover">
+        </div>
+        <div class="space-y-3 text-center sm:text-left flex-1">
+          <span class="inline-block text-[10px] font-bold uppercase tracking-wider text-slate-900 bg-amber-300 px-2 py-0.5 rounded shadow-sm">Produit Vedette</span>
+          <h2 class="font-bold text-base text-white">Casque Sans Fil ANC Studio</h2>
+          <div class="flex items-baseline justify-center sm:justify-start gap-2.5">
+            <span class="text-xl font-black text-white">29.500 FCFA</span>
+            <span class="text-xs text-white/70 line-through">59.000 FCFA</span>
+          </div>
+          <button onclick="addToCart(1)" class="w-full bg-white hover:bg-slate-100 text-slate-900 font-bold text-xs py-3 rounded-xl transition shadow-md flex items-center justify-center gap-2">
+            <i class="fa-solid fa-cart-plus text-indigo-600"></i> Ajouter au panier
+          </button>
+        </div>
+      </div>
+    </section>
+
+    <!-- CATALOGUE DES PRODUITS -->
+    <section id="catalogue" class="space-y-6 scroll-mt-20">
+      <div class="border-b border-slate-200 pb-4">
+        <h2 class="text-2xl font-black text-slate-900">Offres Spéciales Black Friday</h2>
+        <p class="text-xs text-slate-500">Sélectionnez vos articles puis validez votre bon de commande ci-dessous.</p>
+      </div>
+
+      <div id="product-grid" class="grid sm:grid-cols-2 lg:grid-cols-4 gap-5"></div>
+    </section>
+
+    <!-- SECTION AVIS CLIENTS -->
+    <section class="space-y-6">
+      <div class="flex flex-col sm:flex-row sm:items-end justify-between gap-2 border-b border-slate-200 pb-4">
+        <div>
+          <h2 class="text-xl font-black text-slate-900">Avis et Retours Clients</h2>
+          <p class="text-xs text-slate-500">Expériences de nos acheteurs au Bénin.</p>
+        </div>
+        <div class="flex items-center gap-2 text-xs text-slate-600 bg-white border border-slate-200 px-3 py-1.5 rounded-lg shadow-sm">
+          <div class="flex text-amber-400 text-xs">
+            <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+          </div>
+          <span class="font-bold text-slate-900">4.9 / 5</span>
+          <span class="text-slate-400">(48 avis vérifiés)</span>
+        </div>
+      </div>
+
+      <div class="grid md:grid-cols-3 gap-5">
+        <div class="bg-white border border-slate-200 rounded-xl p-5 space-y-3 shadow-sm flex flex-col justify-between">
+          <div class="space-y-2">
+            <div class="flex justify-between items-center">
+              <div class="flex text-amber-400 text-xs gap-0.5">
+                <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+              </div>
+              <span class="text-[10px] text-slate-400">Hier</span>
+            </div>
+            <p class="text-xs text-slate-700 leading-relaxed">
+              "Commande passée le matin pour le casque ANC, livrée vers 15h à Akpakpa. Testé sur place avant de payer par MoMo, rien à dire."
+            </p>
+          </div>
+          <div class="flex items-center gap-3 pt-3 border-t border-slate-100">
+            <div class="w-8 h-8 rounded-full bg-slate-100 border border-slate-200 flex items-center justify-center font-bold text-xs text-slate-700">
+              CA
+            </div>
+            <div>
+              <p class="text-xs font-bold text-slate-900">Christian A.</p>
+              <p class="text-[10px] text-emerald-600 flex items-center gap-1">
+                <i class="fa-solid fa-circle-check text-[9px]"></i> Achat vérifié • Cotonou
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <div class="bg-white border border-slate-200 rounded-xl p-5 space-y-3 shadow-sm flex flex-col justify-between">
+          <div class="space-y-2">
+            <div class="flex justify-between items-center">
+              <div class="flex text-amber-400 text-xs gap-0.5">
+                <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+              </div>
+              <span class="text-[10px] text-slate-400">Il y a 3 jours</span>
+            </div>
+            <p class="text-xs text-slate-700 leading-relaxed">
+              "Les réductions sont bien réelles. J'avais vérifié le prix habituel de la montre Ultra 9 la semaine dernière. Emballage propre."
+            </p>
+          </div>
+          <div class="flex items-center gap-3 pt-3 border-t border-slate-100">
+            <div class="w-8 h-8 rounded-full bg-slate-100 border border-slate-200 flex items-center justify-center font-bold text-xs text-slate-700">
+              AT
+            </div>
+            <div>
+              <p class="text-xs font-bold text-slate-900">Armelle T.</p>
+              <p class="text-[10px] text-emerald-600 flex items-center gap-1">
+                <i class="fa-solid fa-circle-check text-[9px]"></i> Achat vérifié • Porto-Novo
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <div class="bg-white border border-slate-200 rounded-xl p-5 space-y-3 shadow-sm flex flex-col justify-between">
+          <div class="space-y-2">
+            <div class="flex justify-between items-center">
+              <div class="flex text-amber-400 text-xs gap-0.5">
+                <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+              </div>
+              <span class="text-[10px] text-slate-400">Il y a 4 jours</span>
+            </div>
+            <p class="text-xs text-slate-700 leading-relaxed">
+              "Validation directe sur WhatsApp très pratique. Le livreur m'a contacté dès son arrivée à Calavi."
+            </p>
+          </div>
+          <div class="flex items-center gap-3 pt-3 border-t border-slate-100">
+            <div class="w-8 h-8 rounded-full bg-slate-100 border border-slate-200 flex items-center justify-center font-bold text-xs text-slate-700">
+              FM
+            </div>
+            <div>
+              <p class="text-xs font-bold text-slate-900">Florent M.</p>
+              <p class="text-[10px] text-emerald-600 flex items-center gap-1">
+                <i class="fa-solid fa-circle-check text-[9px]"></i> Achat vérifié • Abomey-Calavi
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- FORMULAIRE DE COMMANDE -->
+    <section id="commande" class="max-w-xl mx-auto bg-white border border-slate-200 rounded-2xl p-6 sm:p-8 space-y-6 shadow-sm scroll-mt-20">
+      <div class="border-b border-slate-200 pb-4 flex justify-between items-center">
+        <div>
+          <h2 class="text-lg font-bold text-slate-900">Votre Bon de Commande Black Friday</h2>
+          <p class="text-xs text-slate-500">Ajustez les quantités puis complétez vos informations.</p>
+        </div>
+        <button onclick="clearCart()" class="text-xs text-rose-600 hover:underline">Vider le panier</button>
+      </div>
+
+      <div id="cart-items-container" class="space-y-3"></div>
+
+      <div class="flex justify-between items-center border-t border-slate-200 pt-3 text-sm font-bold">
+        <span class="text-slate-900">Grand Total :</span>
+        <span id="summary-total" class="text-purple-700 font-extrabold text-base">0 FCFA</span>
+      </div>
+
+      <!-- BADGES MOYENS DE PAIEMENT SÉCURISÉ (DÉMO) -->
+      <div class="bg-slate-50 border border-slate-200 rounded-xl p-3 flex items-center justify-between text-[11px] text-slate-600">
+        <span class="font-semibold flex items-center gap-1.5">
+          <i class="fa-solid fa-shield-halved text-emerald-600"></i> Paiement à la livraison
+        </span>
+        <div class="flex items-center gap-2 font-bold text-slate-500">
+          <span class="bg-amber-100 text-amber-800 px-1.5 py-0.5 rounded text-[10px]">MTN MoMo</span>
+          <span class="bg-blue-100 text-blue-800 px-1.5 py-0.5 rounded text-[10px]">Celtiis Cash</span>
+          <span class="bg-slate-200 text-slate-800 px-1.5 py-0.5 rounded text-[10px]">Espèces</span>
+        </div>
+      </div>
+
+      <form onsubmit="submitOrder(event)" class="space-y-4 pt-2">
+        <div class="space-y-3">
+          <div>
+            <label for="input-name" class="block text-xs font-medium text-slate-700 mb-1">Nom & Prénom *</label>
+            <input type="text" id="input-name" required placeholder="Votre Nom et Prénom" class="w-full bg-white border border-slate-300 rounded-lg px-3.5 py-2 text-xs text-slate-900 focus:outline-none focus:border-slate-900">
+          </div>
+
+          <div>
+            <label for="input-phone" class="block text-xs font-medium text-slate-700 mb-1">Téléphone WhatsApp (Bénin) *</label>
+            <input type="tel" id="input-phone" required placeholder="+229 01 98 73 04 05" class="w-full bg-white border border-slate-300 rounded-lg px-3.5 py-2 text-xs text-slate-900 focus:outline-none focus:border-slate-900">
+          </div>
+
+          <div>
+            <label for="input-address" class="block text-xs font-medium text-slate-700 mb-1">Adresse de livraison au Bénin *</label>
+            <input type="text" id="input-address" required placeholder="Ex: Cotonou, Akpakpa" class="w-full bg-white border border-slate-300 rounded-lg px-3.5 py-2 text-xs text-slate-900 focus:outline-none focus:border-slate-900">
+          </div>
+        </div>
+
+        <button type="submit" class="w-full bg-emerald-600 hover:bg-emerald-700 text-white font-semibold py-3.5 rounded-lg text-xs transition flex items-center justify-center gap-2 shadow-sm">
+          <i class="fa-brands fa-whatsapp text-sm"></i>
+          <span>Acheter maintenant via WhatsApp</span>
+        </button>
+      </form>
+    </section>
+
+  </main>
+
+  <!-- PAGE DE CONFIRMATION DE COMMANDE (MASQUÉE PAR DÉFAUT) -->
+  <section id="confirmation-page" class="hidden max-w-2xl mx-auto px-4 py-16 text-center space-y-6">
+    <div class="w-20 h-20 bg-emerald-100 text-emerald-600 rounded-full flex items-center justify-center mx-auto text-3xl shadow-sm">
+      <i class="fa-solid fa-circle-check"></i>
+    </div>
+
+    <div class="space-y-2">
+      <span class="bg-emerald-100 text-emerald-800 text-[10px] font-bold px-3 py-1 rounded-full uppercase tracking-wider">
+        Commande transmise avec succès
+      </span>
+      <h1 class="text-3xl font-black text-slate-900">Merci pour votre commande !</h1>
+      <p class="text-sm text-slate-600 max-w-md mx-auto">
+        Un agent <strong class="text-slate-900">HOMACA Solutions Digital</strong> traite votre demande. Nous vous contacterons sous peu pour la confirmation finale et la livraison.
+      </p>
+    </div>
+
+    <div id="confirmation-details" class="bg-white border border-slate-200 rounded-2xl p-6 text-left space-y-4 shadow-sm"></div>
+
+    <div class="pt-4">
+      <button onclick="resetShop()" class="bg-slate-900 hover:bg-slate-800 text-white font-bold text-xs px-6 py-3 rounded-xl transition">
+        <i class="fa-solid fa-arrow-left mr-2"></i> Retourner à la boutique
+      </button>
+    </div>
+  </section>
+
+  <!-- PIED DE PAGE AVEC CONTACT ET COPYRIGHT -->
+  <footer class="bg-white border-t border-slate-200 py-8 text-xs text-slate-500">
+    <div class="max-w-6xl mx-auto px-4 flex flex-col sm:flex-row justify-between items-center gap-4">
+      <p>© 2026 HOMACA Solutions Digital — Offres Black Friday Exclusives.</p>
+      <p class="flex items-center gap-3">
+        <span>Contact : +229 01 98 73 04 05</span>
+        <span>•</span>
+        <span>Cotonou, Bénin</span>
+      </p>
+    </div>
+  </footer>
+
+  <script>
+    const PHONE_NUMBER = "2290198730405";
+
+    const PRODUCTS = [
+      {
+        id: 1,
+        name: "Casque Sans Fil ANC Studio",
+        category: "Audio",
+        price: 29500,
+        oldPrice: 59000,
+        image: "https://images.unsplash.com/photo-1505740420928-5e560c06d30e?auto=format&fit=crop&w=500&q=80",
+        desc: "Réduction de bruit active, autonomie 40h."
+      },
+      {
+        id: 2,
+        name: "Montre Connectée ULTRA 9",
+        category: "Wearable",
+        price: 21000,
+        oldPrice: 42000,
+        image: "https://images.unsplash.com/photo-1523275335684-37898b6baf30?auto=format&fit=crop&w=500&q=80",
+        desc: "Écran AMOLED 2.0\", suivi santé et sport."
+      },
+      {
+        id: 3,
+        name: "Écouteurs Pro Pods TWS",
+        category: "Audio",
+        price: 12000,
+        oldPrice: 24000,
+        image: "https://images.unsplash.com/photo-1590658268037-6bf12165a8df?auto=format&fit=crop&w=500&q=80",
+        desc: "Boîtier sans fil, micro HD appels."
+      },
+      {
+        id: 4,
+        name: "Enceinte BassPulse 20W",
+        category: "Audio",
+        price: 16000,
+        oldPrice: 32000,
+        image: "https://images.unsplash.com/photo-1608043152269-423dbba4e7e1?auto=format&fit=crop&w=500&q=80",
+        desc: "Son surround 360°, résistant à l'eau."
+      }
+    ];
+
+    let cart = JSON.parse(localStorage.getItem('homaca_cart')) || [{ productId: 1, qty: 1 }];
+
+    function startTimer() {
+      let hours = 4, minutes = 59, seconds = 59;
+      setInterval(() => {
+        seconds--;
+        if (seconds < 0) { seconds = 59; minutes--; }
+        if (minutes < 0) { minutes = 59; hours--; }
+        if (hours < 0) { hours = 0; minutes = 0; seconds = 0; }
+        
+        document.getElementById('timer-hours').textContent = String(hours).padStart(2, '0');
+        document.getElementById('timer-minutes').textContent = String(minutes).padStart(2, '0');
+        document.getElementById('timer-seconds').textContent = String(seconds).padStart(2, '0');
+      }, 1000);
+    }
+
+    function renderProducts() {
+      const grid = document.getElementById('product-grid');
+      grid.innerHTML = PRODUCTS.map(p => `
+        <article class="bg-white border border-slate-200 rounded-xl overflow-hidden flex flex-col justify-between shadow-sm hover:shadow-md transition">
+          <div>
+            <div class="relative bg-slate-100 aspect-square">
+              <span class="absolute top-2 left-2 bg-rose-600 text-white text-[10px] font-extrabold px-2 py-0.5 rounded uppercase shadow-sm">
+                -50% BLACK FRIDAY
+              </span>
+              <img src="${p.image}" alt="${p.name}" width="300" height="300" loading="lazy" class="w-full h-full object-cover">
+            </div>
+            <div class="p-4 space-y-1">
+              <h3 class="font-bold text-sm text-slate-900">${p.name}</h3>
+              <p class="text-xs text-slate-500">${p.desc}</p>
+            </div>
+          </div>
+          <div class="p-4 pt-0 space-y-3">
+            <div class="flex items-baseline justify-between border-t border-slate-100 pt-3">
+              <span class="text-base font-black text-rose-600">${p.price.toLocaleString('fr-FR')} FCFA</span>
+              <span class="text-xs text-slate-400 line-through">${p.oldPrice.toLocaleString('fr-FR')} FCFA</span>
+            </div>
+            <button onclick="addToCart(${p.id})" class="w-full bg-homaca-gradient hover:opacity-95 text-white font-bold text-xs py-2.5 rounded-lg transition shadow-sm">
+              <i class="fa-solid fa-cart-shopping mr-1"></i> Acheter maintenant
+            </button>
+          </div>
+        </article>
+      `).join('');
+    }
+
+    function addToCart(productId) {
+      const existing = cart.find(item => item.productId === productId);
+      if (existing) {
+        existing.qty += 1;
+      } else {
+        cart.push({ productId, qty: 1 });
+      }
+      saveCart();
+      document.getElementById('commande').scrollIntoView({ behavior: 'smooth' });
+    }
+
+    function updateItemQty(productId, delta) {
+      const item = cart.find(i => i.productId === productId);
+      if (item) {
+        item.qty += delta;
+        if (item.qty <= 0) {
+          cart = cart.filter(i => i.productId !== productId);
+        }
+        saveCart();
+      }
+    }
+
+    function removeItem(productId) {
+      cart = cart.filter(i => i.productId !== productId);
+      saveCart();
+    }
+
+    function clearCart() {
+      cart = [];
+      saveCart();
+    }
+
+    function saveCart() {
+      localStorage.setItem('homaca_cart', JSON.stringify(cart));
+      renderCart();
+    }
+
+    function renderCart() {
+      const container = document.getElementById('cart-items-container');
+      const navCount = document.getElementById('nav-cart-count');
+      let total = 0, count = 0;
+
+      if (cart.length === 0) {
+        container.innerHTML = `<p class="text-xs text-slate-400 text-center py-4">Votre panier est vide.</p>`;
+      } else {
+        container.innerHTML = cart.map(item => {
+          const product = PRODUCTS.find(p => p.id === item.productId);
+          if (!product) return '';
+          const subtotal = product.price * item.qty;
+          total += subtotal;
+          count += item.qty;
+
+          return `
+            <div class="flex items-center justify-between bg-slate-50 border border-slate-200 rounded-xl p-3 text-xs">
+              <div class="flex-1 pr-2">
+                <p class="font-bold text-slate-900">${product.name}</p>
+                <p class="text-slate-500">${product.price.toLocaleString('fr-FR')} FCFA / unité</p>
+              </div>
+              <div class="flex items-center gap-3">
+                <div class="flex items-center border border-slate-300 rounded-lg bg-white overflow-hidden">
+                  <button type="button" onclick="updateItemQty(${product.id}, -1)" class="px-2 py-1 text-slate-600 hover:bg-slate-100 font-bold">-</button>
+                  <span class="px-2 font-bold text-slate-900">${item.qty}</span>
+                  <button type="button" onclick="updateItemQty(${product.id}, 1)" class="px-2 py-1 text-slate-600 hover:bg-slate-100 font-bold">+</button>
+                </div>
+                <span class="font-bold text-purple-700 w-20 text-right">${subtotal.toLocaleString('fr-FR')} FCFA</span>
+                <button onclick="removeItem(${product.id})" class="text-slate-400 hover:text-rose-600 pl-1"><i class="fa-solid fa-trash-can"></i></button>
+              </div>
+            </div>
+          `;
+        }).join('');
+      }
+
+      document.getElementById('summary-total').textContent = total.toLocaleString('fr-FR') + ' FCFA';
+      navCount.textContent = count;
+    }
+
+    function submitOrder(e) {
+      e.preventDefault();
+      if (cart.length === 0) return alert("Votre panier est vide.");
+
+      const name = document.getElementById('input-name').value;
+      const phone = document.getElementById('input-phone').value;
+      const address = document.getElementById('input-address').value;
+
+      let total = 0;
+      let itemsText = "";
+      let orderHtml = "";
+
+      cart.forEach((item, i) => {
+        const p = PRODUCTS.find(prod => prod.id === item.productId);
+        if (p) {
+          const subtotal = p.price * item.qty;
+          total += subtotal;
+          itemsText += `${i + 1}. ${p.name} (x${item.qty}) — ${subtotal.toLocaleString('fr-FR')} FCFA\n`;
+          orderHtml += `
+            <div class="flex justify-between items-center text-xs border-b border-slate-100 pb-2">
+              <span class="text-slate-800 font-medium">${p.name} <strong class="text-slate-500">x${item.qty}</strong></span>
+              <span class="font-bold text-slate-900">${subtotal.toLocaleString('fr-FR')} FCFA</span>
+            </div>
+          `;
+        }
+      });
+
+      const orderRef = "HOM-" + Math.floor(100000 + Math.random() * 900000);
+
+      document.getElementById('confirmation-details').innerHTML = `
+        <div class="flex justify-between items-center border-b border-slate-200 pb-3">
+          <div>
+            <p class="text-[10px] text-slate-400 font-bold uppercase">Référence Commande</p>
+            <p class="text-sm font-extrabold text-slate-900">${orderRef}</p>
+          </div>
+          <span class="bg-amber-100 text-amber-800 text-[10px] font-bold px-2.5 py-1 rounded-md">En cours de traitement</span>
+        </div>
+
+        <div class="space-y-2 py-2">
+          <p class="text-xs font-bold text-slate-900">Articles commandés :</p>
+          ${orderHtml}
+        </div>
+
+        <div class="flex justify-between items-center border-t border-slate-200 pt-3 text-sm font-bold">
+          <span class="text-slate-900">Montant Total :</span>
+          <span class="text-purple-700 font-extrabold text-base">${total.toLocaleString('fr-FR')} FCFA</span>
+        </div>
+
+        <div class="bg-slate-50 rounded-xl p-3 text-xs space-y-1 text-slate-600 border border-slate-100 mt-2">
+          <p><strong>Destinataire :</strong> ${name}</p>
+          <p><strong>Téléphone :</strong> ${phone}</p>
+          <p><strong>Adresse de livraison :</strong> ${address}</p>
+        </div>
+      `;
+
+      const message = `Bonjour HOMACA Solutions Digital,\n\nJe valide ma commande BLACK FRIDAY (${orderRef}) :\n\n${itemsText}\nGRAND TOTAL : ${total.toLocaleString('fr-FR')} FCFA\n\nNom : ${name}\nTél : ${phone}\nAdresse de livraison : ${address}`;
+      window.open(`https://wa.me/${PHONE_NUMBER}?text=${encodeURIComponent(message)}`, '_blank');
+
+      cart = [];
+      saveCart();
+      
+      document.getElementById('main-content').classList.add('hidden');
+      document.getElementById('confirmation-page').classList.remove('hidden');
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    }
+
+    function resetShop() {
+      document.getElementById('confirmation-page').classList.add('hidden');
+      document.getElementById('main-content').classList.remove('hidden');
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    }
+
+    renderProducts();
+    renderCart();
+    startTimer();
+  </script>
+</body>
+</html>
