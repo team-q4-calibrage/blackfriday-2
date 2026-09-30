@@ -4,11 +4,13 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
-  <!-- Méta-description SEO & Titre (Exigence Point 9 & 10) -->
   <title>BLACK FRIDAY — HOMACA Solutions Digital | Équipements IT Bénin</title>
   <meta name="description" content="Profitez de réductions jusqu'à -50% sur le matériel informatique et équipements high-tech certifiés par HOMACA Solutions Digital au Bénin. Livraison rapide 24h/48h.">
   
-  <!-- Favicon SVG (Exigence Point 9 & 10) -->
+  <!-- Protection SourceGuard -->
+  <script src="sourceguard.js"></script>
+
+  <!-- Favicon SVG -->
   <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' rx='20' fill='%233B82F6'/><text x='50%' y='65%' font-size='60' font-weight='bold' fill='white' text-anchor='middle'>H</text></svg>">
 
   <!-- Tailwind CSS & FontAwesome -->
@@ -40,9 +42,12 @@
     .animate-marquee:hover {
       animation-play-state: paused;
     }
+    canvas {
+      touch-action: none;
+    }
   </style>
 </head>
-<body class="min-h-full flex flex-col justify-between">
+<body class="min-h-full flex flex-col justify-between select-none">
 
   <!-- BANDEAU SUPERIEUR DÉFILANT -->
   <div class="bg-slate-950 text-slate-300 text-xs py-2 overflow-hidden border-b border-slate-800">
@@ -155,6 +160,31 @@
             <i class="fa-solid fa-cart-plus text-indigo-600"></i> Ajouter au panier
           </button>
         </div>
+      </div>
+    </section>
+
+    <!-- NOUTEAUTÉ : SECTION JEU - CARTE À GRATTER CADEAU -->
+    <section class="bg-gradient-to-r from-amber-500 via-purple-600 to-indigo-600 rounded-3xl p-6 sm:p-8 text-white shadow-xl flex flex-col md:flex-row items-center justify-between gap-6">
+      <div class="space-y-3 text-center md:text-left max-w-md">
+        <span class="bg-black/30 text-amber-300 text-[10px] font-black px-3 py-1 rounded-full uppercase tracking-wider border border-amber-300/30">
+          <i class="fa-solid fa-gift mr-1"></i> Jeu Concours Exclusif
+        </span>
+        <h2 class="text-2xl sm:text-3xl font-black">Grattez votre Carte Cadeau !</h2>
+        <p class="text-xs text-white/90 leading-relaxed font-medium">
+          Grattez la zone grise ci-contre avec votre souris ou votre doigt pour découvrir votre coupon de réduction secret Black Friday HOMACA.
+        </p>
+      </div>
+
+      <div class="relative w-72 h-36 bg-white rounded-2xl p-4 text-slate-900 shadow-2xl flex flex-col items-center justify-center border-4 border-amber-300 overflow-hidden shrink-0">
+        <!-- Code Promo caché en dessous -->
+        <div class="text-center space-y-1">
+          <p class="text-[10px] uppercase tracking-wider text-slate-400 font-bold">Félicitations ! Votre code :</p>
+          <p class="text-2xl font-black text-purple-700 tracking-widest font-mono select-all">HOMACA50</p>
+          <p class="text-[9px] text-emerald-600 font-bold">-5.000 FCFA Supplémentaires</p>
+        </div>
+
+        <!-- Surface à gratter (Canvas) -->
+        <canvas id="scratch-canvas" width="288" height="144" class="absolute inset-0 cursor-pointer rounded-xl"></canvas>
       </div>
     </section>
 
@@ -279,7 +309,7 @@
         <span id="summary-total" class="text-purple-700 font-extrabold text-base">0 FCFA</span>
       </div>
 
-      <!-- BADGES MOYENS DE PAIEMENT SÉCURISÉ (DÉMO) -->
+      <!-- BADGES MOYENS DE PAIEMENT SÉCURISÉ -->
       <div class="bg-slate-50 border border-slate-200 rounded-xl p-3 flex items-center justify-between text-[11px] text-slate-600">
         <span class="font-semibold flex items-center gap-1.5">
           <i class="fa-solid fa-shield-halved text-emerald-600"></i> Paiement à la livraison
@@ -318,7 +348,7 @@
 
   </main>
 
-  <!-- PAGE DE CONFIRMATION DE COMMANDE (MASQUÉE PAR DÉFAUT) -->
+  <!-- PAGE DE CONFIRMATION DE COMMANDE -->
   <section id="confirmation-page" class="hidden max-w-2xl mx-auto px-4 py-16 text-center space-y-6">
     <div class="w-20 h-20 bg-emerald-100 text-emerald-600 rounded-full flex items-center justify-center mx-auto text-3xl shadow-sm">
       <i class="fa-solid fa-circle-check"></i>
@@ -343,7 +373,7 @@
     </div>
   </section>
 
-  <!-- PIED DE PAGE AVEC CONTACT ET COPYRIGHT -->
+  <!-- PIED DE PAGE -->
   <footer class="bg-white border-t border-slate-200 py-8 text-xs text-slate-500">
     <div class="max-w-6xl mx-auto px-4 flex flex-col sm:flex-row justify-between items-center gap-4">
       <p>© 2026 HOMACA Solutions Digital — Offres Black Friday Exclusives.</p>
@@ -398,6 +428,44 @@
     ];
 
     let cart = JSON.parse(localStorage.getItem('homaca_cart')) || [{ productId: 1, qty: 1 }];
+
+    // INITIALISATION DE LA CARTE À GRATTER
+    function initScratchCard() {
+      const canvas = document.getElementById('scratch-canvas');
+      if (!canvas) return;
+      const ctx = canvas.getContext('2d');
+
+      // Couleur de la couche grise à gratter
+      ctx.fillStyle = '#94a3b8';
+      ctx.fillRect(0, 0, canvas.width, canvas.height);
+
+      ctx.fillStyle = '#ffffff';
+      ctx.font = 'bold 14px sans-serif';
+      ctx.textAlign = 'center';
+      ctx.fillText('Grattez ici avec la souris / doigt', canvas.width / 2, canvas.height / 2);
+
+      let isDrawing = false;
+
+      function scratch(e) {
+        if (!isDrawing) return;
+        const rect = canvas.getBoundingClientRect();
+        const x = (e.clientX || (e.touches && e.touches[0].clientX)) - rect.left;
+        const y = (e.clientY || (e.touches && e.touches[0].clientY)) - rect.top;
+
+        ctx.globalCompositeOperation = 'destination-out';
+        ctx.beginPath();
+        ctx.arc(x, y, 18, 0, Math.PI * 2);
+        ctx.fill();
+      }
+
+      canvas.addEventListener('mousedown', () => isDrawing = true);
+      canvas.addEventListener('mouseup', () => isDrawing = false);
+      canvas.addEventListener('mousemove', scratch);
+
+      canvas.addEventListener('touchstart', () => isDrawing = true);
+      canvas.addEventListener('touchend', () => isDrawing = false);
+      canvas.addEventListener('touchmove', scratch);
+    }
 
     function startTimer() {
       let hours = 4, minutes = 59, seconds = 59;
@@ -593,6 +661,7 @@
     renderProducts();
     renderCart();
     startTimer();
+    initScratchCard();
   </script>
 </body>
 </html>
